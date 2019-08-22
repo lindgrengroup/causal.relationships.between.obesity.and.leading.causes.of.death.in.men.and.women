@@ -1,0 +1,79 @@
+################
+################ SCRIPTS USED FOR THE SEX-SPECIFIC GRSs PROJECT
+################ PERTAINING TO THE ACTUAL ANALYSES.
+################ THESE NEED TO BE RUN AFTER THE SCRIPTS IN
+################ "ukbb" and "resources"
+################
+
+Scripts for making the GRSs - note that "pulit.winner" was added in 
+response to a comment from reviewers and hence is not included in all analyses
+1. clean.giant.ukbb.snps.180909.R - Has, however, tri-allelic SNPs in it, 
+these are removed by "remove.triallelic.snps.from.snpgroups.R"
+2. make.bed.giant.ukbb.snps.180911.sh - makes temporary UKBB files in bed format
+to perform GRSs on 
+3. change.rsid.and.merge.files.pulit.180916.sh - runs on pootle, updates to 
+rs123_A_C format and merges files 
+
+Compute LD for the SNPs:
+1. compute.ld.in.ukbb.181123.sh 
+2. get.snps.in.ld.181123.R - Note, only works with the current set of 
+correlated SNPs, if that changes needs to be updated. 
+
+#Make the GRSs:
+1. remove.triallelic.snps.from.snpgroups.R - Removes the tri-allelic
+SNPs and SNPs that fail QC from all snp-groups 
+2. check.why.snps.fail.R 
+3. sex.ethnicity.grs.pulit.180916.sh - makes the profiles for the different
+groups 
+
+To make the FDR approaches
+1. sens.clean.giant.ukbb.snps.181015.R 
+
+To get internally derived weights, as a double-check
+1. get.ukbb.residuals.for.adiposity.traits.180906.R 
+2. derive.ukbb.weights.for.adiposity.traits.180906.sh 
+3. create.risk.files.from.internally.derived.weights.R
+
+To get GIANT weights 
+1. clean.giant.ukbb.snps.get.giant.weights.181022.R 
+
+To make the sensitivity and FDR GRSs and for the internally weighted GRSs
+1. sex.ethnicity.grs.sensitivity.sh 
+
+To define cases in UKBB
+1. define.cases.ukbb.180604.R - a script for defining cases for different diseases
+in the UKBB 
+
+Run the linear regressions: 
+1. anthro.linreg.180520.R 
+2. sens.anthro.linreg.181013.R 
+
+The logistic regressions:
+1. logreg.180531.R - runs the regressions 
+2. sens.logreg.181013.R 
+
+Other Sensitivity analyses and additional investigations
+1. logreg.same.n.cases.controls.180605.R 
+
+MRs
+1. mr.adiposity.traits.to.continuous.traits.ipd.R 
+2. mr.adiposity.traits.to.binary.traits.ipd.R 
+3. clean.fg.fi.files.and.get.rsids.for.proxy.search.R - cleans the FG/FI files and 
+writes a list with SNPs that are not in the FG/FI files to enable proxy search 
+4. mr.adiposity.traits.to.fg.fi.R 
+5. sens.mr.adiposity.traits.to.binary.traits.ipd.R 
+
+Enrichment analyses and to get betas for MR-Egger 
+1. prepare.derive.betas.for.t2d.and.cad.ukbb.180921.R
+2. derive.betas.for.traits.ukbb.180921.sh 
+3. enrichment.analyses.sex.het.disease.outcomes.R - not included in final article because of space 
+4. mr.egger.for.binary.outcomes.R 
+
+Figures:
+1. describe.grs.mr.publication.plots.180802.R 
+
+Make tables for showing data:
+1. summary.tables.ukbb.instruments.other.R - script for making tables, some are not included in article
+but for Jenny's transfer of status only 
+
+

@@ -1,0 +1,48 @@
+These files are the summary files for the men/women specific analyses: 
+
+#FG
+FG_STAGE_GWAS_SEX.out.gz
+FI_STAGE_GWAS_SEX.out.gz
+Files sent from Reedik 2018-09-17, should be the correct fasting insulin
+ and fasting glucose files with sex-specific estimates. 
+
+#Proxies for FI and FG
+File name: proxies.for.fg.fi.180922.txt
+Downloaded from: http://snipa.helmholtz-muenchen.de/snipa3/?task=proxy_search
+Search: The output from script: clean.fg.fi.files.and.get.rsids.for.proxy.search.R 
+Date downloaded: 2018-09-22
+Search settings for job, column description, etc: 
+Header abbreviations:
+
+QRSID = Query SNP rsID
+RSID = Proxy SNP rsID
+RSALIAS = Proxy SNP alias rsID(s)
+CHR = Chromosome
+POS1 = Sentinel SNP Position
+POS2 = Proxy SNP Position
+DIST = Distance
+R2 = LD r^2
+D = LD D
+DPRIME = LD D'
+MAJOR = Proxy Allele A
+MINOR = Proxy Allele B
+MAF = Allele B Frequency
+CMMB = Recombination Rate (CM/Mb)
+CM = Genetic distance (CM)
+COMPEFFECTS = Compressed functional annotation of Proxy SNP
+TRAIT = Associated with trait (yes/no)
+CISEQTL = Associated with eQTL in cis (yes/no)
+TRANSEQTL = Associated with eQTL in trans (yes/no)
+GENES = Genes hit or close-by (distance 5KB max)
+REGGENES = Potentially regulated genes (linked via promoter or enhancer)
+EQTLGENES = Genes linkes via eQTL-associations
+
+Information about this job:
+
+Job ID: 153760344012599
+Genome assembly: grch37
+Reference set: 1kgpp3v5
+Population: eur
+Annotation release: ensembl87
+Input type: snps
+SNPs not in Reference Set or Population: rs35679149 rs11668500 rs528425253 rs10070064 rs244723 rs139271800 rs62070804 rs547943994 rs35632432 

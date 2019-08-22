@@ -1,0 +1,48 @@
+################
+################ SCRIPTS USED FOR THE SEX-SPECIFIC GRSs PROJECT
+################ PERTAINING TO UK BIOBANK SAMPLE AND GENOTYPE CLEANING. 
+################ THESE NEED TO BE RUN BEFORE THE SCRIPTS IN 
+################ "sex.ethnicity.grs.may.2018"
+################
+
+####
+#### GENERAL SAMPLE QC
+####
+
+All ethnicities, sample QC:
+1. sample.qc.ukbb.all.ethnicities.180507.R - general UKBB sample QC 
+2. submit.sample.qc.sh - Submits the former
+
+#####
+##### T2D PHENOTYPES
+#####
+
+1. extract.t2d.columns.for.stata.script.py - this scripts makes the columns necessary for input into Stata for T2D criteria from Eastwood et al.
+
+These scripts are from Eastwood et al (https://doi.org/10.1371/journal.pone.0162388)
+and not released here as not written by us, but they are available upon request to Eastwood et al
+1_UK_Biobank_diabetes_variables_derivation.do 
+2_Flowchart_1_Diabetes_diagnoses_from_UKB_self_report_data_adjudication_algorithms.do 
+3_Flowchart_2_T1DM_from_UKB_self_report_data_adjudication_algorithms.do 
+4_Flowchart_3_T2DM_from_UKB_self_report_data_adjudication_algorithms.do 
+5_Consolidation_of_ending_states_from_algorithms.do
+
+The output logs for these files are then made here: 
+/well/lindgren/jc/ukbb/jonas.t2d.stata.run
+
+And the actual file with diabetes codes is produced here:
+../T2D_adjudicated_2.txt
+
+#### 
+#### EXTRACTING RELEVANT COLUMNS FOR THE OTHER PHENOTYPES
+####
+
+For extracting the relevant columns for case definitions from the raw phenotype file:
+1. ukbb.samples.extract.diagnoses.columns.py
+
+To get the SNPs that pass QC
+1. genotype.qc.ukbb.181023.sh 
+2. double.check.snps.that.pass.all.qc.R - makes a file with info how many SNPs passed at the different
+QC steps, and a file with the SNPs to keep
+
+

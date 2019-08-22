@@ -1,0 +1,85 @@
+################
+################ THE GRSs USED IN THE SEX-SPECIFIC GRSs PROJECT
+################
+
+Data taken from Pulit et al (PMID: 30239722; available here: https://github.com/lindgrengroup/fatdistnGWAS)
+and from the GIANT 2015 Locke et al (PMID: 25673413) and Shungin et al (PMID: 25673412) datasets
+(available here: https://portals.broadinstitute.org/collaboration/giant/index.php/GIANT_consortium_data_files)
+
+1. [bmi/whr/whradjbmi].eur.[comb/men/women].pulit.sig.180513.txt
+The sex-specific estimates (main) approach. Data taken from Pulit et al. Betas flipped to be positive, 
+with corresponding flipping of alleles and EAFs.
+
+SNP: rsID of SNP, then alleles in alphabetical order
+Chr: Chromsome
+Pos: Position in GRCh 37
+EA: Effect allele 
+NEA: Non-effect allele
+psexdiff: Sexual heterogeneity P-value
+frqA1.[combined/men/women]: Effect allele frequency in that sex group
+beta.[combined/men/women]: Beta for that sex group (the weights used)
+se.[combined/men/women]: Standard error for that sex group
+pval.[combined/men/women]: P-value for that sex group
+dir.[combined/men/women]: The original direction of effect in the cohorts (UKBB, GIANT) in Pulit et al. 
+	Note not flipped according to positive betas and flipped alleles	
+nmeta.[combined/men/women]: Meta-analysis sample size for that sex group
+info.[combined/men/women]: Imputation info score from UKBB 
+
+2. [bmi/whr/whradjbmi].eur.[men/women].pulit.180513.txt
+The primary SNPs in each sex only approach. Data taken from Pulit et al. 
+Betas flipped to be positive, with corresponding flipping of alleles and EAFs.
+
+Column names as in the main sex-specific estimates approach. 
+
+3. [bmi/whr/whradjbmi].eur.[men/women].pulit.[phet/0.01.fdr/0.05.fdr/0.1.fdr].180513.txt
+The P-heterogeneity approaches. Data taken from Pulit et al.
+Betas flipped to be positive, with corresponding flipping of alleles and EAFs.
+
+File name explanation: 
+phet = The critical P-value is based on a Bonferroni-correction
+[0.01/0.05/0.1].fdr = The critical value is based on a 1%/5%/10% threshold of FDR-corrected P-values, correspondingly. 
+
+Column names as in the sex-specific estimates approach, but the values in the "phet" columns
+are from the sex-specific analyses if psexdiff < the critical P-value. Note that the psexdiff column in the
+[bmi/whr/whradjbmi].eur.[combined/men/women].pulit.[0.01.fdr/0.05.fdr/0.1.fdr].180513.txt are 
+the original P-values and not the FDR-corrected. 
+
+4. [bmi/whr/whradjbmi].eur.[comb/men/women].pulit.winner.180513.txt
+The approach using SNPs taken from the combined-sexes analysis. Data taken from Pulit et al. 
+Betas flipped to be positive, with corresponding flipping of alleles and EAFs.
+
+Column names as in the sex-specific estimates approach. 
+
+5. [bmi/whr/whradjbmi].eur.comb.pulit.winner_unweigted.180513.txt
+The approach using SNPs taken from the combined-sexes analysis, using unweighted allele scores. Data taken from Pulit et al.
+
+Column names as in the sex-specific estimates approach, and effect alleles the 
+same as in [bmi/whr/whradjbmi].eur.comb.pulit.winner.180513.txt, and all betas set to 1. 
+	
+5. [bmi/whr/whradjbmi].eur.[combined/men/women].giukbb.sig.180513.txt
+The approach using weights from GIANT 2015 data. 
+Betas flipped to be positive, with corresponding flipping of alleles and EAFs.
+
+SNP: rsID of SNP, then alleles in alphabetical order
+Chr: Chromsome
+Pos: Position in GRCh 37
+EA: Effect allele (from GIANT)
+NEA: Non-effect allele (from GIANT)
+beta: Beta for that sex group (the weights used) (from GIANT)
+se: Standard error for that sex group (from GIANT)
+p: P-value for that sex group (from GIANT)
+n: Sample size (from GIANT)
+
+6. [bmi/whr/whradjbmi].eur.[combined/men/women].internal.unweighted.180513.txt
+The approach using unweighted allele scores
+SNP: rsID of SNP, then alleles in alphabetical order
+EA: Effect allele (same as in the main approach after beta flipping)
+NEA: Non-effect allele (same as in the main approach after beta flipping)
+CHR: Chromosome
+BP: Position in GRCh 37
+TEST: Dummy column
+NMISS: Meta-analysis sample size for that sex group from main approach (kept as dummy)
+BETA: The weight used (=1)
+STAT: Dummy column 
+P: P-value for that sex group from main approach (kept as dummy)
+
