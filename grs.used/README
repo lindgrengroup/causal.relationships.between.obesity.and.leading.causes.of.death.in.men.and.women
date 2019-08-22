@@ -50,7 +50,7 @@ Betas flipped to be positive, with corresponding flipping of alleles and EAFs.
 
 Column names as in the sex-specific estimates approach. 
 
-5. [bmi/whr/whradjbmi].eur.comb.pulit.winner_unweigted.180513.txt
+5. [bmi/whr/whradjbmi].eur.comb.pulit.winner_unweighted.180513.txt
 The approach using SNPs taken from the combined-sexes analysis, using unweighted allele scores. Data taken from Pulit et al.
 
 Column names as in the sex-specific estimates approach, and effect alleles the 
