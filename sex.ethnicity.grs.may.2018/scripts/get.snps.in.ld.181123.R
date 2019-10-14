@@ -23,7 +23,7 @@ for (trait in traits) {
 		df$sex_group <- sex_group
 		df$dataset <- dataset
 
-		ld_snps <- df[df$R2 >= 0.05, ]
+		ld_snps <- df[df$R2 > 0.05, ]
 		results_df <- rbind(results_df, ld_snps)
 
 		if (nrow(ld_snps) >= 1) {
