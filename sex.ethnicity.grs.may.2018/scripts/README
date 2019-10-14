@@ -7,7 +7,7 @@
 
 Scripts for making the GRSs - note that "pulit.winner" was added in 
 response to a comment from reviewers and hence is not included in all analyses
-1. clean.giant.ukbb.snps.180909.R - Has, however, tri-allelic SNPs in it, 
+1. clean.giant.ukbb.snps.180909.R - Has tri-allelic SNPs in it, 
 these are removed by "remove.triallelic.snps.from.snpgroups.R"
 2. make.bed.giant.ukbb.snps.180911.sh - makes temporary UKBB files in bed format
 to perform GRSs on 
